@@ -1,5 +1,63 @@
 # Mission 17 - Streamlit
 
+# 수행결과
+- ### streamlit URL: https://app-i4pjbyahxjgazpzzsuzkse.streamlit.app/
+- git hub: https://github.com/mungmung1970/streamlit
+
+## Project Structure
+```
+project_root/
+├── app.py
+├── requirements.txt
+└── src/
+├── init.py
+├── config/
+│ ├── init.py
+│ └── settings.py
+├── model/
+│ ├── init.py
+│ └── vit_model.py
+├── inference/
+│ ├── init.py
+│ └── classify.py
+└── ui/
+├── init.py
+└── layout.py
+```
+
+
+---
+
+## Directory Description 
+
+- **app.py**  
+  애플리케이션 엔트리 포인트 (예: Streamlit 실행 파일)
+
+- **requirements.txt**  
+  프로젝트 의존성 목록
+
+- **src/**  
+  핵심 로직을 담는 패키지 디렉토리
+
+  - **config/**  
+    환경 설정 및 전역 설정 관리  
+    - `settings.py`: 모델, 경로, 하이퍼파라미터 설정
+
+  - **model/**  
+    모델 정의  
+    - `vit_model.py`: Vision Transformer(ViT) 모델 로직
+
+  - **inference/**  
+    추론 로직  
+    - `classify.py`: 이미지 분류 추론 함수
+
+  - **ui/**  
+    UI 구성 요소  
+    - `layout.py`: 화면 레이아웃 및 컴포넌트 정의
+
+---
+
+
 ## 미션 소개
 
 이번 미션에서는 사용자가 웹 인터페이스에서 이미지를 업로드하면  
@@ -132,55 +190,3 @@ Hugging Face Hub에서 제공하는 이미지 분류 모델을 사용합니다.
 5. Main file path
 
 
-# Project Structure
-```
-project_root/
-├── app.py
-├── requirements.txt
-└── src/
-├── init.py
-├── config/
-│ ├── init.py
-│ └── settings.py
-├── model/
-│ ├── init.py
-│ └── vit_model.py
-├── inference/
-│ ├── init.py
-│ └── classify.py
-└── ui/
-├── init.py
-└── layout.py
-```
-
-
----
-
-## Directory Description (선택 사항)
-
-- **app.py**  
-  애플리케이션 엔트리 포인트 (예: Streamlit 실행 파일)
-
-- **requirements.txt**  
-  프로젝트 의존성 목록
-
-- **src/**  
-  핵심 로직을 담는 패키지 디렉토리
-
-  - **config/**  
-    환경 설정 및 전역 설정 관리  
-    - `settings.py`: 모델, 경로, 하이퍼파라미터 설정
-
-  - **model/**  
-    모델 정의  
-    - `vit_model.py`: Vision Transformer(ViT) 모델 로직
-
-  - **inference/**  
-    추론 로직  
-    - `classify.py`: 이미지 분류 추론 함수
-
-  - **ui/**  
-    UI 구성 요소  
-    - `layout.py`: 화면 레이아웃 및 컴포넌트 정의
-
----
