@@ -1,24 +1,13 @@
 # app.py
-
 import sys
 import os
 
+# -------------------------------------------------
+# Python path 설정 (Cloud 안정화)
+# -------------------------------------------------
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-from src.model.vit_model import load_vit_model
-
 
 import streamlit as st
-
-st.title("ViT Image Classification")
-
-try:
-    from src.model.vit_model import load_vit_model
-    processor, model = load_vit_model()
-except Exception as e:
-    st.error("모델 로딩 중 오류 발생")
-    st.exception(e)
-    st.stop()
-
 
 from src.config.settings import (
     MODEL_NAME,
@@ -33,7 +22,7 @@ from src.ui.layout import (
 )
 
 # -------------------------------------------------
-# 페이지 설정
+# 페이지 설정 (⚠ 반드시 최상단)
 # -------------------------------------------------
 st.set_page_config(
     page_title=PAGE_TITLE,
@@ -43,9 +32,14 @@ st.set_page_config(
 st.title("🖼️ Image Classification App")
 
 # -------------------------------------------------
-# 모델 로딩
+# 모델 로딩 (단 1회)
 # -------------------------------------------------
-processor, model = load_vit_model(MODEL_NAME)
+try:
+    processor, model = load_vit_model(MODEL_NAME)
+except Exception as e:
+    st.error("모델 로딩 중 오류 발생")
+    st.exception(e)
+    st.stop()
 
 # -------------------------------------------------
 # UI + 추론
