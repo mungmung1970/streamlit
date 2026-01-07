@@ -9,6 +9,17 @@ from src.model.vit_model import load_vit_model
 
 import streamlit as st
 
+st.title("ViT Image Classification")
+
+try:
+    from src.model.vit_model import load_vit_model
+    processor, model = load_vit_model()
+except Exception as e:
+    st.error("모델 로딩 중 오류 발생")
+    st.exception(e)
+    st.stop()
+
+
 from src.config.settings import (
     MODEL_NAME,
     PAGE_TITLE,
