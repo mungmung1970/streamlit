@@ -1,5 +1,12 @@
 # app.py
 
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+from src.model.vit_model import load_vit_model
+
+
 import streamlit as st
 
 from src.config.settings import (
