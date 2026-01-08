@@ -15,10 +15,13 @@ from src.config.settings import (
     PAGE_ICON,
 )
 from src.model.vit_model import load_vit_model
-from src.inference.classify import classify_image
+from src.inference.classify import classify_image, classify_image_topk
+
 from src.ui.layout import (
+    show_topk_results,
     upload_and_preview_image,
     show_result,
+    show_topk_results,
 )
 
 # -------------------------------------------------
