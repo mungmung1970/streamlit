@@ -2,7 +2,8 @@
 
 # 수행결과
 ## streamlit URL: https://app-i4pjbyahxjgazpzzsuzkse.streamlit.app/
-![streamlit화면예시](/data_files/streamlit.png)
+![streamlit화면예시1](/data_files/streamlit.png)
+![streamlit화면예시2](/data_files/streamlit2.png)
 
 ## git hub: https://github.com/mungmung1970/streamlit
 
