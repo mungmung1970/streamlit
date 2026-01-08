@@ -1,8 +1,10 @@
 # Mission 17 - Streamlit
 
 # 수행결과
-- ### streamlit URL: https://app-i4pjbyahxjgazpzzsuzkse.streamlit.app/
-- git hub: https://github.com/mungmung1970/streamlit
+## streamlit URL: https://app-i4pjbyahxjgazpzzsuzkse.streamlit.app/
+![streamlit화면예시](/data_files/streamlit.png)
+
+## git hub: https://github.com/mungmung1970/streamlit
 
 ## Project Structure
 ```
