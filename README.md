@@ -188,5 +188,3 @@ Hugging Face Hub에서 제공하는 이미지 분류 모델을 사용합니다.
 3. **New app** 클릭
 4. GitHub 저장소 선택
 5. Main file path
-
-

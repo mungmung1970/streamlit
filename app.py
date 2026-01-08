@@ -49,10 +49,11 @@ image = upload_and_preview_image()
 if image is not None:
     if st.button("분류 실행"):
         with st.spinner("이미지를 분석 중입니다..."):
-            label, confidence = classify_image(
+            results = classify_image_topk(
                 image=image,
                 processor=processor,
                 model=model,
+                top_k=5,
             )
 
-        show_result(label, confidence)
+        show_topk_results(results)
